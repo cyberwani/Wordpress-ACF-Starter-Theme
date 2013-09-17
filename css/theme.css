@@ -344,3 +344,39 @@ a img.aligncenter {
 .small-screen {
   display: none !important;
 }
+@media only screen and (min-width: 15rem) {
+  
+}
+@media only screen and (min-width: 20rem) {
+  
+}
+@media only screen and (min-width: 25rem) {
+  
+}
+@media only screen and (min-width: 30rem) {
+  
+}
+@media only screen and (min-width: 35rem) {
+  
+}
+@media only screen and (min-width: 40rem) {
+  
+}
+@media only screen and (min-width: 48rem) {
+  
+}
+@media only screen and (min-width: 59.375rem) {
+  
+}
+@media only screen and (min-width: 62rem) {
+  
+}
+@media only screen and (min-width: 64rem) {
+  
+}
+@media only screen and (min-width: 75rem) {
+  
+}
+@media only screen and (min-width: 85.375rem) {
+  
+}
