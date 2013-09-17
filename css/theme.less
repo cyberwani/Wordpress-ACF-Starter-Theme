@@ -10,6 +10,11 @@
 // Base styling is defined in "includes/base.less" override in this file
 // Base heading styling is defined in "includes/variables.less" & "includes/typography.less"
 
+// Wraps around everything including the header
+#page {
+    .container();
+}
+
 @import "header";              // Header styles
 @import "archive";              // Archive Page
 @import "single";                // Single post and page

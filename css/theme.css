@@ -341,6 +341,30 @@ a img.aligncenter {
   max-width: 100%;
   height: auto;
 }
+#page {
+  /* for IE */
+  zoom: 1;
+  *zoom: 1;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+#page:before,
+#page:after {
+  content: "";
+  display: table;
+}
+#page:after {
+  clear: both;
+}
+#page:before,
+#page:after {
+  content: "";
+  display: table;
+}
+#page:after {
+  clear: both;
+}
 .small-screen {
   display: none !important;
 }
