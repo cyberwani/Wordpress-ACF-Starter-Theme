@@ -105,6 +105,9 @@ function theme_scripts() {
 
 	wp_enqueue_script( 'theme-mainscript', get_template_directory_uri() . '/js/theme.js', array('jquery'), null, true );
 
+	// Localize script so we can make AJAX calls in Wordpress
+	wp_localize_script( 'theme-mainscript', 'wptheme', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
