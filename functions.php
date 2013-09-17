@@ -170,3 +170,9 @@ require get_template_directory() . '/inc/jetpack.php';
  * Wordpress AJAX requests functionality
  */
 require get_template_directory() . '/inc/ajax.php';
+
+/**
+ * An in-built API into the theme that spits out JSON without plugins.
+ * Can I get a fuck yeah!?
+ */
+require get_template_directory() . '/inc/theme-api.php';
