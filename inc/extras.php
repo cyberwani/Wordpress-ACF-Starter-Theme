@@ -68,3 +68,13 @@ function theme_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'theme_wp_title', 10, 2 );
+
+/**
+ * Allows SVG files to be uploaded via the Wordpress media uploader
+ */
+function cc_mime_types( $mimes )
+{
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
