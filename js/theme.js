@@ -23,8 +23,8 @@
 
             $.post(
                 wptheme.ajaxurl, {
-                    action: "wpwtheme-ajaxcall",
-                    nonce: wptheme.nonce
+                    action            : "wpwtheme-ajaxcall",
+                    themenonce : wptheme.nonce
                 },
                 function (response) {
                     console.log(response);
