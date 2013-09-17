@@ -11,6 +11,19 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
+/**
+ * Advanced Custom Fields Integration
+ *
+ * To access the ACF fields interface in the admin section, make sure you
+ * set the below constant ACF_LITE to "FALSE" from the default "TRUE"
+ *
+ * Paste in your custom fields exported PHP code into inc/advanced-custom-fields/acf-fields.php
+ *
+ */
+define( 'ACF_LITE' , TRUE );
+require_once 'inc/advanced-custom-fields/acf.php';
+require_once "inc/advanced-custom-fields/acf-fields.php";
+
 if ( ! function_exists( 'theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
