@@ -1,0 +1,24 @@
+@font-family-sans-serif:    "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:             Georgia, "Times New Roman", Times, serif;
+@font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base:            @font-family-sans-serif;
+
+@font-size-base: 14px;
+
+@font-size-h1:            floor(@font-size-base * 2.60);
+@font-size-h2:            floor(@font-size-base * 2.15);
+@font-size-h3:            ceil(@font-size-base * 1.70);
+@font-size-h4:            ceil(@font-size-base * 1.25);
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil(@font-size-base * 0.85);
+
+@headings-font-family:  @font-family-base;
+@headings-font-weight: 500;
+@headings-line-height:  1.1;
+@headings-color:           inherit;
+
+// Grid system variables, feel free to override
+@column-width: 60;
+@gutter-width: 20;
+@columns: 15;
+@container-maxwidth: 1200px;
