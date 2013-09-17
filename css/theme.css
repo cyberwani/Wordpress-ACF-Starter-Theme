@@ -190,18 +190,18 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
-img {
-  height: auto;
-  max-width: 100%;
-}
-video {
-  height: auto !important;
-  width: 100% !important;
-}
+img,
 embed,
 iframe,
 object {
   max-width: 100%;
+}
+img {
+  height: auto;
+}
+video {
+  height: auto !important;
+  width: 100% !important;
 }
 body {
   width: 100%;

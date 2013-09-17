@@ -16,20 +16,20 @@ body {
     font-size: @font-size-base;
 }
 
+// Make sure embeds, images and iframes fit their containers
+img,
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
 img {
     height: auto;
-    max-width: 100%;
 }
 
 // Responsive video elements
 video {
     height: auto !important;
     width: 100% !important;
-}
-
-// Make sure embeds and iframes fit their containers
-embed,
-iframe,
-object {
-    max-width: 100%;
 }
