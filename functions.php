@@ -19,10 +19,15 @@ if ( ! isset( $content_width ) )
  *
  * Paste in your custom fields exported PHP code into inc/advanced-custom-fields/acf-fields.php
  *
+ * We check ACF isn't already installed first or we get errors.
+ *
  */
-define( 'ACF_LITE' , TRUE );
-require_once 'inc/advanced-custom-fields/acf.php';
-require_once "inc/advanced-custom-fields/acf-fields.php";
+if (!defined('ACF_LITE'))
+{
+    define( 'ACF_LITE' , TRUE );
+    require_once 'inc/advanced-custom-fields/acf.php';
+    require_once "inc/advanced-custom-fields/acf-fields.php";
+}
 
 if ( ! function_exists( 'theme_setup' ) ) :
 /**
