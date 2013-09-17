@@ -365,6 +365,19 @@ a img.aligncenter {
 #page:after {
   clear: both;
 }
+#primary {
+  display: inline;
+  float: left;
+  width: 65%;
+  margin: 0 0.833333333%;
+}
+#secondary {
+  display: inline;
+  float: left;
+  width: 25%;
+  margin: 0 0.833333333%;
+  margin-left: 7.5%;
+}
 .small-screen {
   display: none !important;
 }
