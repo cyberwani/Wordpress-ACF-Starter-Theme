@@ -198,6 +198,11 @@ video {
   height: auto !important;
   width: 100% !important;
 }
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
 body {
   width: 100%;
   /* for IE */
