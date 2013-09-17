@@ -41,6 +41,12 @@ function theme_setup()
 {
 
     /**
+     * The admin bar is friggen' annoying, this removes it from the front-end
+     * If you're a weirdo and like the bar, remove the below code.
+     */
+    add_filter('show_admin_bar', '__return_false');
+
+    /**
      * Make theme available for translation
      * Translations can be filed in the /languages/ directory
      * If you're building a theme based on Theme, use a find and replace
