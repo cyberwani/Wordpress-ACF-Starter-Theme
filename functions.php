@@ -187,3 +187,8 @@ require get_template_directory() . '/inc/ajax.php';
  * Can I get a fuck yeah!?
  */
 require get_template_directory() . '/inc/theme-api.php';
+
+/**
+ * Define custom post types in here cowboy/cowgirl
+ */
+require get_template_directory() . '/inc/post-types.php';
