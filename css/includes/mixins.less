@@ -5,6 +5,14 @@
     box-sizing:         @type;
 }
 
+.background-size(@val: cover) {
+  -webkit-background-size: @val;
+  -moz-background-size: @val;
+  -ms-background-size: @val;
+  -o-background-size: @val;
+  background-size: @val;
+}
+
 // Prevents long lines of text with no spaces from breaking out of containers
 // Use this anywhere user generated content can be displayed
 .prevent-text-breakouts() {
@@ -115,6 +123,12 @@
     -webkit-background-clip:            padding-box;
     -moz-background-clip:               padding;
     background-clip:                    padding-box;
+}
+
+.drop-shadow(@params) {
+    -moz-box-shadow: @params;
+    -webkit-box-shadow: @params;
+    box-shadow: @params;
 }
 
 .content-columns(@column-count, @column-gap: @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1)) {
