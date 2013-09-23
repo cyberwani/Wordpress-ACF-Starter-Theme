@@ -44,6 +44,10 @@ body {
 }
 
 .row(@columns:@columns) {
+
+    // Some versions of LESS don't do dynamic variable scoping, so this fixes the issue
+    @gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns);
+
     .clearfix();
     display: block;
     width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
@@ -52,6 +56,10 @@ body {
     // *margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1)-@correction;
 }
 .column(@x,@columns:@columns) {
+
+    // Some versions of LESS don't do dynamic variable scoping, so this fixes the issue
+    @gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns);
+
     display: inline;
     float: left;
     width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
