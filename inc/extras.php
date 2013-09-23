@@ -7,6 +7,20 @@
  * @package Theme
  */
 
+/* Function code courtesy of Brian Cray: http://briancray.com/posts/estimated-reading-time-web-design/ */
+function theme_average_reading_time()
+{
+    global $post;
+    $content = $post->post_content;
+
+    $word = str_word_count(strip_tags($content));
+    $m = floor($word / 200);
+    $s = floor($word % 200 / (200 / 60));
+    $est = $m . ' minute' . ($m == 1 ? '' : 's') . ', ' . $s . ' second' . ($s == 1 ? '' : 's');
+
+    return $est;
+}
+
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
