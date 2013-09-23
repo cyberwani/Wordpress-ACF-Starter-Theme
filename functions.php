@@ -192,3 +192,8 @@ require get_template_directory() . '/inc/theme-api.php';
  * Define custom post types in here cowboy/cowgirl
  */
 require get_template_directory() . '/inc/post-types.php';
+
+/**
+ * Define custom taxonomies in here, head honcho!
+ */
+require get_template_directory() . '/inc/taxonomies.php';
