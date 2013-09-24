@@ -51,9 +51,9 @@
     padding: 0;
 }
 
-.font-size(@size, @multiplier: 0.84) {
-    @remValue: (@size/16);
-    @remLine: (@size/16) * @multiplier;
+.font-size(@size, @context: 16, @multiplier: 0.84) {
+    @remValue: (@size/@context);
+    @remLine: (@size/@context) * @multiplier;
     font-size: ~"@{size}px";
     font-size: ~"@{remValue}rem";
     line-height: (@size*@multiplier)+0px;
