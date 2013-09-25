@@ -64,7 +64,7 @@ function theme_setup()
      *
      * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
      */
-    //add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
 
     /**
      * This theme uses wp_nav_menu() in one location.
@@ -79,12 +79,19 @@ function theme_setup()
     add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
     /**
-     * Setup the WordPress core custom background feature.
+     * Clean up junk and security issues from header
+     *
+     * Wordpress sometimes reveals far too much and adds
+     * unneeded junk, this removes it. Remove anything you want.
      */
-    add_theme_support( 'custom-background', apply_filters( 'theme_custom_background_args', array(
-        'default-color' => 'ffffff',
-        'default-image' => '',
-    ) ) );
+    remove_action( 'wp_head', 'rel_canonical' );
+    remove_action( 'wp_head', 'index_rel_link' );
+    remove_action( 'wp_head', 'start_post_rel_link' );
+    remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head' );
+    remove_action( 'wp_head', 'rsd_link' );
+    remove_action( 'wp_head', 'wlwmanifest_link' );
+    remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+    remove_action( 'template_redirect', 'wp_shortlink_header' );
 }
 endif; // theme_setup
 add_action( 'after_setup_theme', 'theme_setup' );
