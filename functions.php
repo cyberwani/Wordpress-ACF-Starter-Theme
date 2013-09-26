@@ -124,6 +124,7 @@ function theme_scripts()
 
     // Media Queries in the form of a Javascript library
     wp_enqueue_script( 'response-js', get_template_directory_uri() . '/js/response-0.7.8.min.js', array(), "0.7.8", false );
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), "2.6.2", false );
 
     wp_enqueue_script( 'theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
 
